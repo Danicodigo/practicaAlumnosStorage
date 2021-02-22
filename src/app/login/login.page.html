@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+
+   
+
+    <ion-item>
+
+      <ion-label position="floating" color="primary">Email</ion-label>
+
+      <ion-input type="text" formControlName="email"></ion-input>
+
+    </ion-item>
+    <ion-item>
+
+      <ion-label position="floating" color="primary">Conytaseña:</ion-label>
+
+      <ion-input type="password" formControlName="password"></ion-input>
+
+    </ion-item>
+   
+    <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">
+      Submit data</ion-button>
+
+  </form>
+
+</ion-content>
